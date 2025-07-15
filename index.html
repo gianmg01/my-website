@@ -59,6 +59,36 @@
     }
 
     .project-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+    .contact a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      font-size: 0.9em;
+    }
+
+    .project-card {
       position: relative;
       background: #fff;
       border: 1px solid #ddd;
@@ -94,9 +124,9 @@
     
     /* Set different images for each card */
     .l-systems::before {
-      background-image: url('images/l_systems.jpg');
+      background-image: url('images/l_systems.png');
     }
-    
+  
 
   </style>
 </head>
