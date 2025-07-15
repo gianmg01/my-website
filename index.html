@@ -1,11 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name - Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #333;
+      --accent-color: #007acc;
+      --background-color: #f9f9f9;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--primary-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 5px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+
+    .contact a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      font-size: 0.9em;
+    }
+
+  </style>
 </head>
 <body>
-  <h1>Welcome to my website</h1>
-  <p>This is a custom HTML page.</p>
-</body>
-</html>
+  <header>
+    <h1>Your Name</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m a passionate software developer with experience in building web applications, scripts, and tools. I love learning new technologies and solving real-world problems through code. 
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>
+          A brief description of your project. Include technologies used, features, or goals.
+        </p>
+        <p>
+          <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>
+          Another project summary. Keep it clear and concise.
+        </p>
+        <p>
+          <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Project 3</h3>
+        <p>
+          You can add as many projects as you want. Each one gets its own card.
+        </p>
+        <p>
+          <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Email me at <a href="mailto:yourname@example.com">yourname@example.com</a>
+      <br>
+      or connect with me on 
+      <a href="https://www.linkedin.com/in/yourprofile" target="_b_
