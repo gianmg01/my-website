@@ -120,15 +120,39 @@
     .project-card > * {
       position: relative;
       z-index: 1;
+    }
+    
+    .project-card h3,
+    .project-card p {
       text-shadow:
       -1px -1px 0 rgba(0,0,0,0.5),
        1px -1px 0 rgba(0,0,0,0.5),
       -1px  1px 0 rgba(0,0,0,0.5),
        1px  1px 0 rgba(0,0,0,0.5);
     }
-    
+    .project-card a {
+      text-decoration: underline;
+      text-shadow: none;
+    }
+
     /* Set different images for each card */
+    .ldvae-t::before {
+      background-image: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('images/model_diagram.png');
+    }
     .l-systems::before {
+      background-image: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('images/l_systems.png');
+    }
+    
+    .compiler::before {
+      background-image: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('images/l_systems.png');
+    }
+    .geo-app::before {
       background-image: 
         linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         url('images/l_systems.png');
@@ -157,7 +181,7 @@
   <section id="projects">
     <h2>Research Projects</h2>
     <div class="projects">
-      <div class="project-card">
+      <div class="project-card ldvae-t">
         <h3>LDVAE-T</h3>
         <p>
           A novel deep learning model for hyperspectral unmixing that combines transformer architectures with a Latent Dirichlet Variational Autoencoder. Designed to capture spatial and spectral context, the model estimates material abundances in hyperspectral imagery with significantly improved accuracy. My work included model design, implementation, and extensive evaluation on benchmark datasets.
@@ -181,7 +205,7 @@
           <a href="https://github.com/gianmg01/LD-Transformer" target="_blank">View Project (TODO)</a>
         </p>
       </div>
-      <div class="project-card">
+      <div class="project-card compiler">
         <h3>Custom Compiler</h3>
         <p>
           For my Compilers course, I designed and implemented a custom compiler for a custom-designed programming language.
@@ -190,7 +214,7 @@
           <a href="https://github.com/yourusername/project3" target="_blank">View Project (TODO)</a>
         </p>
       </div>
-      <div class="project-card">
+      <div class="project-card geo-app">
         <h3>Geolocation App</h3>
         <p>
           I created a game for my application development course using Flutter in Android Studio. The game involves getting images of locations around my university campus and trying to find where they were taken from. 
@@ -208,4 +232,12 @@
       Email me at <a href="mailto:gianmgiannetti@gmail.com">gianmgiannetti@gmail.com</a>
       <br>
       Socials: 
-      <a href="https://https://www.linkedin.com/in/giancarlo-giannetti-681a38233/" target="_b_
+      <a href="https://https://www.linkedin.com/in/giancarlo-giannetti-681a38233/" target="_blank">LinkedIn</a>.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Giancarlo Giannetti. All rights reserved.
+  </footer>
+</body>
+</html>
