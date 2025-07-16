@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L-System Generation - Project Details</title>
+
+  <!-- Fonts and Base CSS Matching Main Site -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background-color: #121212;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --accent-color: #00bcd4;
+      --text-color: #e0e0e0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #26d9e7;
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--accent-color);
+    }
+
+    header h1 {
+      font-family: 'Fira Code', monospace;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+
+    header nav a {
+      margin: 0 12px;
+      font-weight: 600;
+      padding: 6px 10px;
+      border-radius: 4px;
+      color: var(--accent-color);
+    }
+
+    header nav a:hover {
+      background-color: rgba(0, 188, 212, 0.1);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-family: 'Fira Code', monospace;
+      font-size: 1.8rem;
+      color: var(--accent-color);
+      margin-top: 50px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      max-width: 800px;
+      color: var(--text-color);
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 220px;
+      margin: 20px 0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      border-top: 1px solid var(--accent-color);
+      font-size: 0.9em;
+      margin-top: 60px;
+      color: #777;
+    }
+
+    .header-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 10px;
+      }
+      
+      .back-link {
+        font-family: 'Fira Code', monospace;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+      
+      .back-link:hover {
+        color: #26d9e7;
+      }
+      .header-center {
+        text-align: center;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .header-title {
+        font-family: 'Fira Code', monospace;
+        color: var(--accent-color);
+        font-size: 2rem;
+        font-weight: 700;
+        margin: 0;
+      }
+      
+      .header-subtitle {
+        font-family: 'Inter', sans-serif;
+        color: #aaa;
+        font-size: 1rem;
+        margin-top: 5px;
+      }
+      ul {
+        margin: 20px 0;
+        padding-left: 30px;
+        list-style-type: disc;
+        color: var(--text-color);
+      }
+      
+      li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+      .demo-gif img {
+        width: 50%;
+        max-width: 800px;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.1);
+        display: block;
+        margin: 30px auto;
+      }
+      
+  </style>
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+          <a class="back-link" href="index.html">&#8592; Back</a>
+          <div class="header-center">
+            <h1 class="header-title">L-system Generation</h1>
+            <p class="header-subtitle">Project Overview</p>
+          </div>
+          <div class="header-spacer"></div>
+        </div>
+    </header>
+
+  <main>
+    <div class="demo-gif">
+        <img src="images/L-Systems.gif" alt="L-System Generator Demo">
+      </div>
+    
+
+    <h2>Project Overview</h2>
+    <p>
+        I developed an OpenGL/C++ program that generates realistic tree models using L-systems. The scene includes a ground mesh, procedurally built hexagonal branches, and flat rhombus leaves. The tree structure is defined by a custom grammar and input file specifying season, recursion depth, starting sentence, and replacement rules.
+    </p>
+    <p>
+        The program parses this grammar to build complex branching patterns recursively, with transformations based on symbols like turns and groupings. Seasonal settings adjust leaf color, presence, and ground textures for winter, spring, summer, or fall. Leaves are added in natural patterns along branches, scaling dynamically for realism.
+    </p>
+    <p>
+        The result is a fully configurable tree generator that visualizes grammar-driven structures in 3D, demonstrating recursive modeling techniques and rule-based procedural generation in OpenGL.
+    </p>
+
+    <div class="image-placeholder">
+        <img src="images/trees1.PNG">
+    </div>
+
+    <h2>How It Works</h2>
+    <p>
+    The generator uses an input file to define the L-system grammar and parameters. This file specifies the desired season, recursion depth, starting sentence, and replacement rule. The season setting changes ground color and leaf appearance to match winter, spring, summer, or fall. The recursion depth controls the complexity of the branching structure by determining how many times the rule replaces the "F" symbol in the sentence.
+    </p>
+    <p>
+    The grammar defines symbols for actions like branching and turning:
+    <ul>
+        <li><strong>F</strong>: create a branch (replaced recursively)</li>
+        <li><strong>f</strong>: create a branch (static, no replacement)</li>
+        <li><strong>+</strong> / <strong>-</strong>: rotate toward/away from the camera</li>
+        <li><strong>#</strong> / <strong>/</strong>: turn left/right</li>
+        <li><strong>()</strong>: group child branches</li>
+    </ul>
+    Example rule: F(+F)(-F(F)(/F))(#F(/F)(+F))(F)(/F)
+    </p>
+    <p>
+    After parsing the input, the program builds the final sentence by recursively applying the replacement rule to all "F" symbols. This resulting string encodes the full tree structure. The <code>buildModel</code> method initializes the ground and then calls <code>buildBranch</code> recursively to interpret the sentence.
+    </p>
+    <p>
+    Each branch is represented as a hexagonal prism mesh, scaled down at each level of recursion for a natural tapering effect. Leaves are simple rhombus meshes, placed in an “X” pattern at the ends of branches and scattered randomly along them. The result is a 3D model that visually represents the specified L-system grammar with detailed seasonal variation and hierarchical branching.
+    </p>
+
+
+  </main>
+
+  <footer>
+    &copy; 2025 Giancarlo Giannetti. All rights reserved.
+  </footer>
+</body>
+</html>
