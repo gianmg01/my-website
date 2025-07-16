@@ -99,16 +99,6 @@
       justify-content: center;
       color: #555;
     }
-    .image-placeholder2 {
-        width: 100%;
-        height: 400px;
-        margin: 20px 0;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #555;
-      }
 
     footer {
       text-align: center;
@@ -174,6 +164,14 @@
         margin-bottom: 10px;
         line-height: 1.6;
       }
+      .demo-gif img {
+        width: 50%;
+        max-width: 800px;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,0.1);
+        display: block;
+        margin: 30px auto;
+      }
       
   </style>
 </head>
@@ -190,9 +188,10 @@
     </header>
 
   <main>
-    <div class="image-placeholder">
-        <img src="images/trees1.png">
-    </div>
+    <div class="demo-gif">
+        <img src="images/L-Systems.gif" alt="L-System Generator Demo">
+      </div>
+    
 
     <h2>Project Overview</h2>
     <p>
@@ -204,6 +203,10 @@
     <p>
         The result is a fully configurable tree generator that visualizes grammar-driven structures in 3D, demonstrating recursive modeling techniques and rule-based procedural generation in OpenGL.
     </p>
+
+    <div class="image-placeholder">
+        <img src="images/trees1.png">
+    </div>
 
     <h2>How It Works</h2>
     <p>

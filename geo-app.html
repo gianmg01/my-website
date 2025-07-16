@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geolocation App - Project Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --background-color: #121212;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --accent-color: #00bcd4;
+      --text-color: #e0e0e0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #26d9e7;
+    }
+
+    header {
+      background-color: #000;
+      padding: 30px 20px;
+      border-bottom: 1px solid var(--accent-color);
+    }
+
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+
+    .back-link {
+      font-family: 'Fira Code', monospace;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .back-link:hover {
+      color: #26d9e7;
+    }
+
+    .header-center {
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-title {
+      font-family: 'Fira Code', monospace;
+      color: var(--accent-color);
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .header-subtitle {
+      font-family: 'Inter', sans-serif;
+      color: #aaa;
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-family: 'Fira Code', monospace;
+      font-size: 1.8rem;
+      color: var(--accent-color);
+      margin-top: 50px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      max-width: 800px;
+      color: var(--text-color);
+    }
+
+    .section-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 60px 0;
+      gap: 20px;
+    }
+
+    .section-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .section-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 20px;
+      }
+
+    .section-image {
+      flex: 1 1 300px;
+      max-width: 300px;
+      aspect-ratio: 9 / 16;
+      background-color: #222;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 1rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .section-text {
+      flex: 2 1 400px;
+    }
+
+    .section-text p {
+      max-width: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      border-top: 1px solid var(--accent-color);
+      font-size: 0.9em;
+      margin-top: 60px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .section-row {
+        flex-direction: column !important;
+      }
+      .section-image {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-bar">
+      <a class="back-link" href="index.html">&#8592; Back</a>
+      <div class="header-center">
+        <h1 class="header-title">Geolocation App</h1>
+        <p class="header-subtitle">Project Overview</p>
+      </div>
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <main>
+    <h2>About the App</h2>
+    <p>
+      This mobile app is a location-based scavenger hunt game built with Flutter and Firebase. Players select a set of locations—or create their own custom sets—by uploading photos and GPS coordinates, which are stored and managed using Firebase for seamless data persistence. The game challenges users to explore their surroundings by finding the real-world locations shown in the images. It also integrates Google Maps for navigation support, offering a rich, interactive experience that leverages real-world exploration.
+    </p>
+
+    <div class="section-row">
+        <div class="section-image">
+            <img src="images/geo1.PNG" alt="Geolocation App Screen 1">
+        </div>
+      <div class="section-text">
+        <h2>Home Screen</h2>
+        <p>
+            The home screen is the central hub where players can choose from available location sets or create their own. They can add new locations by uploading photos and specifying their GPS coordinates, all saved to Firebase for reliable storage and retrieval across devices. This customization allows players to build unique scavenger hunts tailored to their campus or city, making the game flexible and endlessly replayable.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-row">
+        <div class="section-image">
+            <img src="images/geo2.PNG" alt="Geolocation App Screen 1">
+        </div>
+      <div class="section-text">
+        <h2>In-Game Screen</h2>
+        <p>
+        During gameplay, users are shown photos of specific locations they need to find in real life. The objective is to navigate to the correct spot and tap the "Submit" button to log their guess and move to the next challenge. Difficulty settings adjust the time limit per location and the number of available hints, adding a strategic layer to the experience. Notifications alert players when time is almost up, keeping the pace engaging and competitive.
+        </p>
+      </div>
+    </div>
+
+    <div class="section-row">
+        <div class="section-image">
+            <img src="images/geo3.PNG" alt="Geolocation App Screen 1">
+        </div>
+      <div class="section-text">
+        <h2>Map Integration</h2>
+        <p>
+        The app features an integrated map powered by the Google Maps API. Players can open the map from the in-game screen to view their current position and any pins related to the hunt. This integration helps users navigate their environment and plan their route to the target location. The map-based hints system shows players how far they are from the correct spot, enhancing exploration and guiding them without giving away the exact answer.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Giancarlo Giannetti. All rights reserved.
+  </footer>
+</body>
+</html>
