@@ -192,7 +192,7 @@
     <div class="project-header-content">
       <a class="back-link" href="index.html">&#8592; Back</a>
       <div class="header-center">
-        <h1 class="header-title">ShazNet</h1>
+        <h1 class="header-title">ShazNet – Acoustic Drone Intelligence</h1>
         <p class="header-subtitle">Project Overview</p>
       </div>
     </div>
@@ -209,10 +209,10 @@
     <section>
       <h2>Introduction</h2>
       <p>
-        ShazNet is a placeholder description for now. Here you can briefly describe the high-level goal of the project, its main idea, and what makes it interesting or unique. You might mention the core technologies involved, the problem it aims to solve, and where it fits within your broader work.
+        ShazNet is a prototype acoustic intelligence system designed to identify small drones from audio alone—essentially a “Shazam for drones.” The system combines a FastAPI + PyTorch backend with a retro terminal-style web interface that supports real-time inference, waveform visualization, and live microphone streaming. Users can upload audio clips or stream directly through their mic to receive continuous predictions on which drone model is present.
       </p>
       <p>
-        You can expand this section later with more detail—such as the model architecture, dataset, or the main research question that ShazNet explores.
+        This prototype was awarded 2nd Place at the 2025 Shazam for Drones Defence Hackathon.
       </p>
     </section>
 
@@ -234,11 +234,24 @@
     <section>
       <h2>How It Works</h2>
       <p>
-        This section is a placeholder for a deeper explanation of how ShazNet works internally. You can describe the model architecture, training pipeline, data preprocessing steps, or any novel techniques you implemented.
+        ShazNet processes raw audio to classify UAVs using a custom MelSpecTransformerVAE model. The system analyzes sounds either in full clips or in smaller temporal windows, allowing it to detect changes in drone type throughout a recording. Audio is converted into log-mel spectrograms, passed through a Transformer-based encoder, and then evaluated by a lightweight classifier built on top of the VAE’s latent representation.
       </p>
       <p>
-        Consider highlighting key design decisions, performance results, or comparisons to baseline methods. This is a good place to make the technical value of the project clear to reviewers or potential employers.
+        The interface enables users to inspect and interact with audio clips through a retro terminal-style UI. Waveforms can be played, zoomed, and segmented for localized predictions. Long Temporal Inference (LTI) mode divides a full recording into fixed windows and overlays color-coded prediction bars across the waveform to show which drone is active at each moment. The system also supports real-time microphone streaming, providing continuous classification updates and rolling waveform visualization.
       </p>
+      <p>
+        Because the frontend is model-agnostic, it can be paired with any backend checkpoint simply by dropping in a new .pt model file and a corresponding class_names.json. This makes ShazNet modular, extensible, and easy to adapt for future drone classification research.
+      </p>
+    </section>
+
+    <section>
+        <h2>My Contribution</h2>
+        <p>
+            My primary contribution to the project was designing, implementing, and training the Transformer-based backend model that powers ShazNet’s drone classification engine. I developed a custom MelSpecTransformerVAE architecture that processes log-mel spectrogram sequences and produces robust latent representations for downstream classification. The model was trained on multi-class UAV audio datasets and ultimately achieved the highest classification accuracy score in the entire event.
+        </p>
+        <p>
+            This backend became the core of the ShazNet system, enabling reliable segment-level inference, long temporal analysis, and real-time microphone classification. The performance of the Transformer VAE was a key factor in the project earning 2nd place at the 2025 Shazam for Drones Defence Hackathon.
+        </p>
     </section>
 
     <!-- Links Section -->
@@ -246,14 +259,14 @@
       <h2>Learn More</h2>
       <div class="links-list">
         <!-- Replace these hrefs with your real links when ready -->
-        <a href="https://github.com/yourusername/shaznet" target="_blank" rel="noopener noreferrer">
-          View on GitHub
+        <a href="https://github.com/gianmg01/szt_transformer" target="_blank" rel="noopener noreferrer">
+          View model on GitHub
         </a>
-        <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">
-          Read the Paper
+        <a href="https://github.com/neelshah27/ShazNet/tree/szt_LTI" target="_blank" rel="noopener noreferrer">
+          View web-app on GitHub
         </a>
-        <a href="https://your-demo-link.com" target="_blank" rel="noopener noreferrer">
-          Live Demo
+        <a href="https://devpost.com/software/vclab-shaz-net" target="_blank" rel="noopener noreferrer">
+          View Devpost
         </a>
       </div>
     </section>
